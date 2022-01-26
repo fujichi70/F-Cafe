@@ -10,9 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Playball&display=swap" rel="stylesheet">  <link rel="stylesheet" href="style.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Playball&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -71,7 +70,7 @@
         </div>
     </div>
   </main>
-  <h1></h1>
+
   <div class="container">
     <div>
       <h3 class="title">Title</h3>
@@ -93,48 +92,14 @@
     </div>
   </div>
 
+  <footer id="footer">
 
-  <script>
+  </footer>
 
-    $(function () {
-      $('.hamburger').click(function () {
-        $(this).toggleClass('active');
-
-        if ($(this).hasClass('active')) {
-          $('.globalMenuSp').addClass('active');
-        } else {
-          $('.globalMenuSp').removeClass('active');
-        }
-      });
-    });
-
-    $(function () {
-      $('.main_menu li').mouseenter(function () {
-        $(this).siblings().find('ul').hide();
-        $(this).children().slideDown(200);
-      });
-      $('html').click(function () {
-        $('.main_menu .sub_menu').slideUp(200);
-      });
-    });
-    $(function () {
-      $('.title').on('click', function () {
-        $(this).next().slideToggle(200);
-      });
-    });
-    $(function () {
-      $('.item').on('inview', function () {
-        $(this).addClass('show');
-      });
-    });
-
-    $(function() {
-      $(window).on('load',function() {
-        $('.main-text').addClass('appear');
-      });
-    });
-  </script>
-
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+<script src="raindrop.js"></script>
+<script src="main.js"></script>
 </body>
-
 </html>
