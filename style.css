@@ -1,0 +1,262 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: antiquewhite;
+    font-family: 'Permanent Marker', cursive;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: azure;
+}
+
+/* ハンバーガーメニュー */
+.hamburger {
+    display : block;
+    position: fixed;
+    z-index : 3;
+    right : 13px;
+    top   : 12px;
+    width : 42px;
+    height: 42px;
+    cursor: pointer;
+    text-align: center;
+  }
+  .hamburger span {
+    display : block;
+    position: absolute;
+    width   : 30px;
+    height  : 2px ;
+    left    : 6px;
+    background : rgb(87, 16, 16);
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition   : 0.3s ease-in-out;
+    transition        : 0.3s ease-in-out;
+  }
+  .hamburger span:nth-child(1) {
+    top: 10px;
+  }
+  .hamburger span:nth-child(2) {
+    top: 20px;
+  }
+  .hamburger span:nth-child(3) {
+    top: 30px;
+  }
+  
+  /* ナビ開いてる時のボタン */
+  .hamburger.active span:nth-child(1) {
+    top : 16px;
+    left: 6px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform   : rotate(-45deg);
+    transform        : rotate(-45deg);
+  }
+  
+  .hamburger.active span:nth-child(2),
+  .hamburger.active span:nth-child(3) {
+    top: 16px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform   : rotate(45deg);
+    transform        : rotate(45deg);
+  }
+  
+  nav.globalMenuSp {
+    position: fixed;
+    z-index : 2;
+    top  : 0;
+    left : 0;
+    color: #000;
+    background: #fff;
+    text-align: center;
+    transform: translateX(100%);
+    transition: all 0.6s;
+    width: 100%;
+  }
+  
+  nav.globalMenuSp ul {
+    background: burlywood;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+  }
+  
+  nav.globalMenuSp ul li {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+  }
+  nav.globalMenuSp ul li:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  nav.globalMenuSp ul li:hover{
+    background :rgb(255, 212, 156);
+    
+  }
+  
+  nav.globalMenuSp ul li a {
+    display: block;
+    color: rgb(87, 16, 16);
+    padding: 1em 0;
+    text-decoration :none;
+  }
+  
+  /* このクラスを、jQueryで付与・削除する */
+  nav.globalMenuSp.active {
+    transform: translateX(0%);
+  }
+  
+.pc-menu {
+    display: none;
+}
+
+
+.main_menu {
+    background-color:burlywood;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.main_menu li {
+    position: relative;
+    margin: 0 10px;
+}
+
+.sub_menu { 
+    display: none;
+    position: absolute;
+}
+
+.sub_menu li {
+    display: block;
+}
+
+.container {
+    margin-bottom: 50px;
+}
+
+
+
+h3 {
+    background-color: antiquewhite;
+    padding: 10px;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+}
+
+h3:hover {
+    cursor: pointer;
+}
+
+.content {
+    display: none;
+}
+
+.item {
+    margin-bottom: 10px;
+    opacity: 0;
+}
+
+.show {
+    transition: all 2s;
+    opacity: 1;
+}
+
+/* main */
+.main-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  opacity: 0;
+  font-size: 2em;
+}
+
+.main-text.appear{
+  opacity: 1;
+}
+
+.main-text.appear .chars {
+  display: inline-block;
+  -webkit-animation-name: animate-chars;
+          animation-name: animate-chars;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+
+.main-text.appear .chars:nth-child(1) {
+    -webkit-animation-delay: 0.04s;
+            animation-delay: 0.04s;
+  }
+  
+  .main-text.appear .chars:nth-child(2) {
+    -webkit-animation-delay: 0.08s;
+            animation-delay: 0.08s;
+  }
+  
+  .main-text.appear .chars:nth-child(3) {
+    -webkit-animation-delay: 0.12s;
+            animation-delay: 0.12s;
+  }
+  
+  .main-text.appear .chars:nth-child(4) {
+    -webkit-animation-delay: 0.16s;
+            animation-delay: 0.16s;
+  }
+
+  @-webkit-keyframes animate-chars {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+  
+  @keyframes animate-chars {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+  
+
+
+@media screen and (min-width:700px) {
+    .sp-menu {
+        display: none;
+    }
+
+    .pc-menu {
+        display: initial;
+    }
+    
+}
