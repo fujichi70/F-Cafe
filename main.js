@@ -15,9 +15,9 @@ $(function () {
     $(this).toggleClass('active');
 
     if ($(this).hasClass('active')) {
-      $('.globalMenuSp').addClass('active');
+      $('.sp-menu--list').addClass('active');
     } else {
-      $('.globalMenuSp').removeClass('active');
+      $('.sp-menu--list').removeClass('active');
     }
   });
 });
@@ -28,7 +28,7 @@ $(function () {
     $(this).children().slideDown(200);
   });
   $('html').click(function () {
-    $('.main_menu .sub_menu').slideUp(200);
+    $('.pc-menu--main_menu .pc-menu--sub_menu').slideUp(200);
   });
 });
 $(function () {

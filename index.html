@@ -2,104 +2,150 @@
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Playball&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Permanent+Marker&family=Playball&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header>
+	<header>
 
-    <div class="sp-menu">
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-  
-      <nav class="globalMenuSp">
-        <ul>
-          <li><a href="#">MENU</a></li>
-          <li><a href="#">NEWS</a></li>
-          <li><a href="#">SHOP</a></li>
-          <li><a href="#">ACCESS</a></li>
-        </ul>
-      </nav>
-    </div>
+		<div class="sp-menu">
+			<div class="hamburger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
 
-
-    <div class="pc-menu">
-      <nav>
-        <ul class="main_menu">
-          <li><a href="#">MENU</a></li>
-          <ul class="sub_menu">
-            <li><a href="#">drink</a></li>
-            <li><a href="#">food</a></li>
-          </ul>
-          <li><a href="#">NEWS</a></li>
-          <ul class="sub_menu">
-            <li><a href="#">営業について</a></li>
-            <li><a href="#">スタジオスケジュールについて</a></li>
-          </ul>
-          <li><a href="#">SHOP</a></li>
-          <ul class="sub_menu">
-            <li><a href="#">shop infomation -店内紹介-</a></li>
-            <li><a href="#">service</a></li>
-          </ul>
-          <li><a href="#">ACCESS・MAP</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+			<nav class="sp-menu--list">
+				<ul class="sp-menu--parts">
+					<li class="sp-menu--title"><a href="#">MENU</a></li>
+					<li class="sp-menu--title"><a href="#">NEWS</a></li>
+					<li class="sp-menu--title"><a href="#">SHOP</a></li>
+					<li class="sp-menu--title"><a href="#">ACCESS</a></li>
+				</ul>
+			</nav>
+		</div>
 
 
-  <main>
-    <div class="main-imgs">
-      <div class="main-text">
-        <span class="chars">I</span>
-        <span class="chars">Love</span>
-        <span class="chars">Coffee</span>
-        <span class="chars">.</span>
-        </div>
-    </div>
-  </main>
+		<div class="pc-menu">
+			<nav class="pc-menu--list">
+				<ul class="pc-menu--main_menu">
+					<li><a href="#">MENU</a></li>
+					<ul class="pc-menu--sub_menu">
+						<li><a href="#">drink</a></li>
+						<li><a href="#">food</a></li>
+					</ul>
+					<li><a href="#">NEWS</a></li>
+					<ul class="pc-menu--sub_menu">
+						<li><a href="#">営業について</a></li>
+						<li><a href="#">スタジオスケジュールについて</a></li>
+					</ul>
+					<li><a href="#">SHOP</a></li>
+					<ul class="pc-menu--sub_menu">
+						<li><a href="#">shop infomation -店内紹介-</a></li>
+						<li><a href="#">service</a></li>
+					</ul>
+					<li><a href="#">ACCESS・MAP</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 
-  <div class="container">
-    <div>
-      <h3 class="title">Title</h3>
-      <div class="content">
-        <p>コンテンツが入ります。</p>
-      </div>
-    </div>
-    <div>
-      <h3 class="title">Title</h3>
-      <div class="content">
-        <p>コンテンツが入ります。</p>
-      </div>
-    </div>
-    <div>
-      <h3 class="title">Title</h3>
-      <div class="content">
-        <p>コンテンツが入ります。コンテンツが入ります。コンテンツが入ります。コンテンツが入ります。</p>
-      </div>
-    </div>
-  </div>
 
-  <footer id="footer">
+	<main id="main">
+		<div class="main-imgs">
+			<div class="main-text">
+				<span class="chars">I</span>
+				<span class="chars">Love</span>
+				<span class="chars">Coffee</span>
+				<span class="chars">.</span>
+			</div>
+			<div class="main-img--parts"><img class="main-img" src="img/back-coffee.png" alt="コーヒーの画像"></div>
+		</div>
+	</main>
 
-  </footer>
+	<section id="news">
+		<div class="container">
+			<div class="card card01">
+			  <h3 class="card--title">New Release</h3>
+			  <div class="bar">
+				  <div class="emptybar"></div>
+				  <div class="filledbar"></div>
+				  <p class="card--text">1日限定15食のいちごチーズケーキ新登場！是非ご賞味ください♪</p>
+			  </div>
+			</div>
+			<div class="card card02">
+				<h3 class="card--title">Card 1</h3>
+				<div class="bar">
+				<div class="emptybar"></div>
+				<div class="filledbar"></div>
+				<p class="card--text">1日限定15食のいちごチーズケーキ新登場！是非ご賞味ください♪</p>
+			</div>
+			</div>
+			<div class="card card03">
+				<h3 class="card--title">Card 1</h3>
+				<div class="bar">
+				<div class="emptybar"></div>
+				<div class="filledbar"></div>
+				<p class="card--text">1日限定15食のいちごチーズケーキ新登場！是非ご賞味ください♪</p>
+			</div>
+			</div>
+			<div class="card card04">
+				<h3 class="card--title">Card 1</h3>
+				<div class="bar">
+				<div class="emptybar"></div>
+				<div class="filledbar"></div>
+				<p class="card--text">1日限定15食のいちごチーズケーキ新登場！是非ご賞味ください♪</p>
+			</div>
+			</div>
+		  </div>
+	</section>
+	
+	<section id="menu">
+		
+	</section>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
-<script src="raindrop.js"></script>
-<script src="main.js"></script>
+	<!-- <div class="container">
+		<div>
+			<h3 class="title">Title</h3>
+			<div class="content">
+				<p>コンテンツが入ります。</p>
+			</div>
+		</div>
+		<div>
+			<h3 class="title">Title</h3>
+			<div class="content">
+				<p>コンテンツが入ります。</p>
+			</div>
+		</div>
+		<div>
+			<h3 class="title">Title</h3>
+			<div class="content">
+				<p>コンテンツが入ります。コンテンツが入ります。コンテンツが入ります。コンテンツが入ります。</p>
+			</div>
+		</div>
+	</div> -->
+
+	<footer id="footer">
+
+	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"
+		integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+	<script src="raindrop.js"></script>
+	<script src="main.js"></script>
 </body>
+
 </html>

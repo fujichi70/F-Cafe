@@ -1,0 +1,254 @@
+@import 'css/news';
+
+// 共通
+body {
+    margin: 0;
+    padding: 0;
+    background-color: antiquewhite;
+    font-family: "Permanent Marker", cursive;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: azure;
+}
+
+/* ハンバーガーメニュー */
+.hamburger {
+    display: block;
+    position: fixed;
+    z-index: 3;
+    right: 13px;
+    top: 12px;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    text-align: center;
+
+    span {
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        left: 6px;
+        background: rgb(87, 16, 16);
+        transition: 0.3s ease-in-out;
+
+        @for $i from 1 through 3 {
+            &:nth-child(#{$i}) {
+                top: $i * 10px;
+            }
+        }
+    }
+}
+
+/* ナビ開いてる時のボタン */
+.hamburger.active span {
+    &:nth-child(1) {
+        top: 16px;
+        left: 6px;
+        transform: rotate(-45deg);
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+        top: 16px;
+        transform: rotate(45deg);
+    }
+}
+
+.sp-menu--list {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    color: #000;
+    background: #fff;
+    text-align: center;
+    transform: translateX(100%);
+    transition: all 0.6s;
+    width: 100%;
+
+    .sp-menu--parts {
+        background: burlywood;
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+
+        .sp-menu--title {
+            padding: 0;
+            width: 100%;
+            border-bottom: 1px solid #fff;
+
+            &:last-child {
+                padding-bottom: 0;
+                border-bottom: none;
+            }
+            &:hover {
+                background: rgb(255, 212, 156);
+            }
+            a {
+                display: block;
+                color: rgb(87, 16, 16);
+                padding: 1em 0;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.sp-menu--list.active {
+    transform: translateX(0%);
+}
+
+.pc-menu {
+    display: none;
+}
+
+.pc-menu--main_menu {
+    background-color: burlywood;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.pc-menu--main_menu li {
+    position: relative;
+    margin: 0 10px;
+}
+
+.pc-menu--sub_menu {
+    display: none;
+    position: absolute;
+}
+
+.pc-menu--sub_menu li {
+    display: block;
+}
+
+.container {
+    margin-bottom: 50px;
+}
+
+/* アコーディオンメニュー */
+// h3 {
+//     background-color: antiquewhite;
+//     padding: 10px;
+//     margin: 0;
+//     display: inline-block;
+//     width: 100%;
+// }
+
+// h3:hover {
+//     cursor: pointer;
+// }
+
+// .content {
+//     display: none;
+// }
+
+// .item {
+//     margin-bottom: 10px;
+//     opacity: 0;
+// }
+
+// .show {
+//     transition: all 2s;
+//     opacity: 1;
+// }
+
+/* メイン */
+#main {
+    background: url(img/cheers.jpg) center center / cover;
+    height: 100vh;
+    position: relative;
+    
+    .main-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        color: white;
+        opacity: 0;
+        font-size: 2em;
+		overflow: hidden;
+		text-align: center;
+    }
+
+    .appear {
+        opacity: 1;
+    }
+
+    .chars {
+        display: inline-block;
+        animation: animate-chars 0.5s 1 normal both;
+
+        @for $i from 1 through 4 {
+            &:nth-child(#{$i}) {
+                animation-delay: $i * 0.04s;
+            }
+        }
+    }
+
+	.main-img--parts {
+		overflow: hidden;
+
+		.main-img {
+            position: absolute;
+            top: 100px;
+            left: 0;
+			width: 150%;
+            margin-left: auto;
+		}
+	}
+}
+
+@keyframes sway {
+    from { transform: skew(-15deg) rotateX(10deg) }
+      to { transform: skew(15deg) rotateX(-10deg) }
+  }
+
+
+@keyframes animate-chars {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+/* フッター */
+#footer {
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 500px;
+    color: rgb(66, 1, 1);
+}
+
+/* PCメニュー */
+@media screen and (min-width: 700px) {
+    .sp-menu {
+        display: none;
+    }
+
+    .pc-menu {
+        display: initial;
+    }
+}
