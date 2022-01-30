@@ -1,21 +1,13 @@
 @charset "UTF-8";
-#news .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+#news .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  place-items: center;
 }
 
 #news .card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   height: 280px;
   width: 300px;
   background-color: burlywood;
@@ -25,7 +17,6 @@
   -webkit-transition: 0.4s ease-out;
   transition: 0.4s ease-out;
   position: relative;
-  left: 0px;
 }
 
 #news .card01 {
@@ -112,6 +103,51 @@ li {
 a {
   text-decoration: none;
   color: azure;
+}
+
+.main--title {
+  -webkit-animation: up-chars 6.5s linear infinite;
+          animation: up-chars 6.5s linear infinite;
+  display: inline-block;
+  font-size: 40px;
+}
+
+@-webkit-keyframes up-chars {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  10% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  20% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@keyframes up-chars {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  10% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  20% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
 }
 
 /* ハンバーガーメニュー */
@@ -241,16 +277,13 @@ a {
   display: block;
 }
 
-.container {
-  margin-bottom: 50px;
-}
-
 /* アコーディオンメニュー */
 /* メイン */
 #main {
   background: url(img/cheers.jpg) center center/cover;
-  height: 100vh;
+  height: 95vh;
   position: relative;
+  margin-bottom: 50px;
 }
 
 #main .main-text {
@@ -373,6 +406,25 @@ a {
   }
   .pc-menu {
     display: initial;
+  }
+  #news {
+    margin-bottom: 50px;
+  }
+  #news .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin: 0 auto;
+  }
+  #news .card {
+    width: 350px;
+  }
+  #news .card:hover ~ .card {
+    position: relative;
+    left: 50px;
+    -webkit-transition: 0.4s ease-out;
+    transition: 0.4s ease-out;
   }
 }
 /*# sourceMappingURL=style.css.map */
