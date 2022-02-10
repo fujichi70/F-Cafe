@@ -3,7 +3,7 @@ body {
 	font-family: 'Open Sans', sans-serif;
   }
   
-  .container {
+  .wrapper {
 	position: absolute;
 	height: 300px;
 	width: 600px;

@@ -16,7 +16,11 @@
     }
 
     .card01 {
-        background: url(../img/cake1.jpg) center center / cover;
+        background: url(../img/cake5.jpg) center center / cover;
+    }
+
+    .card02 {
+        background: url(../img/croissants.jpg) center center / cover;
     }
 
     .card:hover {
@@ -26,8 +30,7 @@
 
     .card--title {
         color: white;
-        width: 80%;
-        font-weight: 300;
+        font-weight: 300px;
         position: absolute;
         left: 25px;
         top: 5px;
@@ -70,13 +73,15 @@
 
 	.card--text {
 		font-family: 'Kiwi Maru', serif;
-		width: 95%;
 		position: absolute;
+        left: 50%;
 		bottom: -230px;
+        width: 230px;
+        transform: translateX(-45%);
 		background-color: rgba(255, 255, 255, 0.5);
 		color: black;
 		border-radius: 10px;
 		padding: 10px;
-		font-size: 20px;
+		font-size: 18px;
 	}
 }

@@ -1,3 +1,4 @@
+// 下部アニメーション
 $(function() {
     $('#footer').raindrops({
         color:'rgb(66, 1, 1)',
@@ -10,6 +11,7 @@ $(function() {
     });
 });
 
+// ハンバーガメニュー
 $(function () {
   $('.hamburger').click(function () {
     $(this).toggleClass('active');

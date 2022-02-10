@@ -20,7 +20,11 @@
 }
 
 #news .card01 {
-  background: url(../img/cake1.jpg) center center/cover;
+  background: url(../img/cake5.jpg) center center/cover;
+}
+
+#news .card02 {
+  background: url(../img/croissants.jpg) center center/cover;
 }
 
 #news .card:hover {
@@ -32,8 +36,7 @@
 
 #news .card--title {
   color: white;
-  width: 80%;
-  font-weight: 300;
+  font-weight: 300px;
   position: absolute;
   left: 25px;
   top: 5px;
@@ -74,14 +77,103 @@
 
 #news .card--text {
   font-family: 'Kiwi Maru', serif;
-  width: 95%;
   position: absolute;
+  left: 50%;
   bottom: -230px;
+  width: 230px;
+  -webkit-transform: translateX(-45%);
+          transform: translateX(-45%);
   background-color: rgba(255, 255, 255, 0.5);
   color: black;
   border-radius: 10px;
   padding: 10px;
-  font-size: 20px;
+  font-size: 18px;
+}
+
+/* ストア */
+#store .store--text {
+  font-family: "Kiwi Maru", serif;
+}
+
+#store .store--introduction {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+#store .store--introduction .store--frame {
+  position: absolute;
+}
+
+#store .store--introduction .store--frame .store--frame-img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: 100%;
+}
+
+#store .store--introduction .store--introduction-img .store--img-outside {
+  max-width: 100%;
+}
+
+#store .store--introduction .store--text {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  left: 30%;
+  right: 0;
+  -webkit-transform: translate(-20%, -50%);
+          transform: translate(-20%, -50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#store .store--img-inside {
+  max-width: 100%;
+}
+
+#menu .menu--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#menu .menu--parts:hover .menu--text {
+  display: block;
+}
+
+#menu .menu--text {
+  position: relative;
+  display: none;
+  padding: 5px 0;
+  text-align: center;
+  margin: 0 10px;
+  color: #571010;
+  font-size: 30px;
+  border-radius: 20px;
+}
+
+#menu .menu--icon {
+  position: relative;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  padding: 5px 0 0;
+  margin: 0 10px;
+  border-radius: 50%;
+  background-color: burlywood;
+  color: #571010;
+}
+
+#menu .menu--icon-img {
+  width: 50px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 body {
@@ -105,11 +197,20 @@ a {
   color: azure;
 }
 
+.main--title-box {
+  text-align: center;
+}
+
 .main--title {
   -webkit-animation: up-chars 6.5s linear infinite;
           animation: up-chars 6.5s linear infinite;
   display: inline-block;
   font-size: 40px;
+  color: #571010;
+}
+
+.wrapper {
+  margin: 0 10px 40px;
 }
 
 @-webkit-keyframes up-chars {
@@ -281,7 +382,7 @@ a {
 /* メイン */
 #main {
   background: url(img/cheers.jpg) center center/cover;
-  height: 95vh;
+  height: 100vh;
   position: relative;
   margin-bottom: 50px;
 }
@@ -406,6 +507,9 @@ a {
   }
   .pc-menu {
     display: initial;
+  }
+  #main {
+    height: 95vh;
   }
   #news {
     margin-bottom: 50px;

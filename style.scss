@@ -1,5 +1,8 @@
+@import 'css/variables';
 @import 'css/news';
 @import 'css/contents';
+@import 'css/store';
+@import 'css/menu';
 
 // 共通
 body {
@@ -23,10 +26,20 @@ a {
     color: azure;
 }
 
+.main--title-box {
+    text-align: center;
+}
+
 .main--title {
 	animation: up-chars 6.5s linear infinite;
 	display: inline-block;
     font-size: 40px;
+    color: $sBrown;
+}
+
+// レイアウト
+.wrapper {
+    margin: 0 10px 40px;
 }
 
 @keyframes up-chars {
@@ -68,7 +81,7 @@ a {
         width: 30px;
         height: 2px;
         left: 6px;
-        background: rgb(87, 16, 16);
+        background: $sBrown;
         transition: 0.3s ease-in-out;
 
         @for $i from 1 through 3 {
@@ -126,7 +139,7 @@ a {
             }
             a {
                 display: block;
-                color: rgb(87, 16, 16);
+                color: $sBrown;
                 padding: 1em 0;
                 text-decoration: none;
             }
@@ -193,7 +206,7 @@ a {
 /* メイン */
 #main {
     background: url(img/cheers.jpg) center center / cover;
-    height: 95vh;
+    height: 100vh;
     position: relative;
     margin-bottom: 50px;
     
@@ -275,6 +288,10 @@ a {
 
     .pc-menu {
         display: initial;
+    }
+
+    #main {
+    height: 95vh;
     }
 
     #news {

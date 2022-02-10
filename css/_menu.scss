@@ -1,0 +1,52 @@
+#menu {
+    .menu--list {
+        display: flex;
+    }
+
+	.menu--parts {
+		&:hover .menu--text {
+			display: block;
+		}
+	}
+	
+    .menu--text {
+		position: relative;
+        display: none;
+		padding: 5px 0;
+        text-align: center;
+        margin: 0 10px;
+        color: $sBrown;
+        font-size: 30px;
+        border-radius: 20px;
+
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     top: 100%;
+        //     left: 33%;
+        //     border: 15px solid transparent;
+        //     border-top: 15px solid $sBrown;
+        // }
+    }
+
+    .menu--icon {
+        position: relative;
+        text-align: center;
+        width: 100px;
+        height: 100px;
+        padding: 5px 0 0;
+        margin: 0 10px;
+        border-radius: 50%;
+        background-color: burlywood;
+        color: $sBrown;
+    }
+
+    .menu--icon-img {
+        width: 50px;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

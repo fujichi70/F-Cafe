@@ -12,7 +12,10 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Permanent+Marker&family=Playball&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Permanent+Marker&family=Playball&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+		integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 	<link rel="stylesheet" href="style.css">
 </head>
 
@@ -64,71 +67,93 @@
 
 	<main>
 		<section id="main">
-			<div class="container">
-				<div class="main-imgs">
-					<div class="main-text">
-						<span class="chars">I</span>
-						<span class="chars">Love</span>
-						<span class="chars">Coffee</span>
-						<span class="chars">.</span>
-					</div>
-					<!-- <div class="main-img--parts"><img class="main-img" src="img/back-coffee.png" alt="コーヒーの画像"></div> -->
+			<div class="main-imgs">
+				<div class="main-text">
+					<span class="chars">I</span>
+					<span class="chars">Love</span>
+					<span class="chars">Coffee</span>
+					<span class="chars">.</span>
 				</div>
+				<!-- <div class="main-img--parts"><img class="main-img" src="img/back-coffee.png" alt="コーヒーの画像"></div> -->
 			</div>
 		</section>
 	</main>
 
-	<section id="news">
-		<div class="container grid">
+	<section id="news" class="wrapper">
+		<div class="main--title-box">
+			<h1 class="main--title">news</h1>
+		</div>
+		<div class="grid">
 			<div class="card card01">
-			  <h3 class="card--title">New Release</h3>
-			  <div class="bar">
-				  <div class="emptybar"></div>
-				  <div class="filledbar"></div>
-				  <p class="card--text">1日限定15食のいちごチーズケーキ新登場！是非ご賞味ください♪</p>
-			  </div>
+				<h3 class="card--title">Today's limited</h3>
+				<div class="bar">
+					<div class="emptybar"></div>
+					<div class="filledbar"></div>
+					<p class="card--text">1日限定15食！いちごチーズケーキ新登場！是非ご賞味ください♪</p>
+				</div>
 			</div>
 			<div class="card card02">
-				<h3 class="card--title">Card 1</h3>
+				<h3 class="card--title">New Release</h3>
 				<div class="bar">
-				<div class="emptybar"></div>
-				<div class="filledbar"></div>
-				<p class="card--text">1日限定15食のいちごチーズケーキ新登場！是非ご賞味ください♪</p>
-			</div>
+					<div class="emptybar"></div>
+					<div class="filledbar"></div>
+					<p class="card--text">いちごクロワッサン新発売♪サクサクふわふわ♪</p>
+				</div>
 			</div>
 			<div class="card card03">
 				<h3 class="card--title">Card 1</h3>
 				<div class="bar">
-				<div class="emptybar"></div>
-				<div class="filledbar"></div>
-				<p class="card--text">1日限定15食のいちごチーズケーキ新登場！是非ご賞味ください♪</p>
-			</div>
+					<div class="emptybar"></div>
+					<div class="filledbar"></div>
+					<p class="card--text">1日限定15食のいちごチーズケーキ新登場！是非ご賞味ください♪</p>
+				</div>
 			</div>
 			<div class="card card04">
 				<h3 class="card--title">Card 1</h3>
 				<div class="bar">
-				<div class="emptybar"></div>
-				<div class="filledbar"></div>
-				<p class="card--text">1日限定15食のいちごチーズケーキ新登場！是非ご賞味ください♪</p>
+					<div class="emptybar"></div>
+					<div class="filledbar"></div>
+					<p class="card--text">1日限定15食のいちごチーズケーキ新登場！是非ご賞味ください♪</p>
+				</div>
 			</div>
-			</div>
-		  </div>
+		</div>
 	</section>
-	
-	<section id="store">
-		<div class="container">
-			<h1 class="main--title">Inside</h1>
+
+	<section id="store" class="wrapper">
+		<div class="main--title-box">
+			<h1 class="main--title">Store</h1>
+		</div>
+		<div class="store--imgs">
+			<div class="store--introduction">
+				<div class="store--introduction-img"><img class="store--img-outside" src="img/storeoutside.jpg" alt=""></div>
+				<div class="store--text">地下鉄表参道駅から徒歩７分の絵本の世界のようなおしゃれなcafe</div>
+			</div>
+			<div class="store--img-parts"><img class="store--img-inside" src="img/store1.jpg" alt=""></div>
+			<div class="store--text">リラックスできる広々とした空間をご用意いたしました。ゆっくりとした時間をご堪能ください。</div>
+			<div class="store--img-parts"><img class="store--img-inside" src="img/store2.jpg" alt=""></div>
 		</div>
 	</section>
 
 
-	<section id="menu">
-		<div class="container">
+	<section id="menu" class="wrapper">
+		<div class="main--title-box">
 			<h1 class="main--title">Menu</h1>
 		</div>
+		<div class="menu--list">
+			<div class="menu--parts">
+				<p class="menu--text">Drink</p>
+				<div class="menu--icon drink"><img class="menu--icon-img" src="img/coffee-solid.svg" alt="ドリンクアイコン">
+				</div>
+			</div>
+			<div class="menu--parts">
+				<p class="menu--text">Food</p>
+				<div class="menu--icon food"><img class="menu--icon-img" src="img/hamburger-solid.svg" alt="フードアイコン">
+				</div>
+			</div>
+		</div>
 	</section>
 
-	<!-- <div class="container">
+	<div class="wrapper">
 		<div>
 			<h3 class="title">Title</h3>
 			<div class="content">
@@ -147,7 +172,7 @@
 				<p>コンテンツが入ります。コンテンツが入ります。コンテンツが入ります。コンテンツが入ります。</p>
 			</div>
 		</div>
-	</div> -->
+	</div>
 
 	<footer id="footer">
 
