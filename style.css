@@ -378,6 +378,24 @@ a {
   display: block;
 }
 
+.fade {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: opacity 1s, -webkit-transform .7s;
+  transition: opacity 1s, -webkit-transform .7s;
+  transition: opacity 1s, transform .7s;
+  transition: opacity 1s, transform .7s, -webkit-transform .7s;
+}
+
+.fade.in {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
 /* アコーディオンメニュー */
 /* メイン */
 #main {
