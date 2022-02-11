@@ -176,6 +176,21 @@ a {
     display: block;
 }
 
+// フェードイン
+.fade {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+    transition: opacity 1s, transform .7s;
+}
+
+.fade.in {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+
 /* アコーディオンメニュー */
 // h3 {
 //     background-color: antiquewhite;
