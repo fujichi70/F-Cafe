@@ -1,0 +1,18 @@
+#map {
+    .wrapper {
+        padding: 100px 20px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .map-text--box {
+        margin-bottom: 30px;
+    }
+    .map-google--parts {
+        margin: 60px 0;
+        text-align: center;
+        .map-google {
+            width: 100%;
+        }
+    }
+}

@@ -4,15 +4,15 @@
  */
 $.widget("water.raindrops", {
     options: {
-        waveLength: 340,    // Wave Length. A numeric value. The higher the number, the smaller the wave length.
+        waveLength: 400,    // Wave Length. A numeric value. The higher the number, the smaller the wave length.
         canvasWidth: 0,     // Width of the  water. Default is 100% of the parent's width
-        canvasHeight: 0,    // Height of the water. Default is 50% of the parent's height 
+        canvasHeight: 1000,    // Height of the water. Default is 50% of the parent's height 
         color: '#00aeef',   // Water Color
-        frequency: 3,       // Raindrops frequency. Higher number means more frequent raindrops.
-        waveHeight: 100 ,   // Wave height. Higher number means higher waves created by raindrops.
-        density: 0.02,      // Water density. Higher number means shorter ripples.
-        rippleSpeed:  0.1,  // Speed of the ripple effect. Higher number means faster ripples.
-        rightPadding: 20,    // To cover unwanted gaps created by the animation.
+        frequency: 40,       // Raindrops frequency. Higher number means more frequent raindrops.
+        waveHeight: 200,   // Wave height. Higher number means higher waves created by raindrops.
+        density: 0.1,      // Water density. Higher number means shorter ripples.
+        rippleSpeed:  0.01,  // Speed of the ripple effect. Higher number means faster ripples.
+        rightPadding: 1000,    // To cover unwanted gaps created by the animation.
         position:'absolute',
         positionBottom:0,
         positionLeft:0
@@ -53,7 +53,7 @@ $.widget("water.raindrops", {
         //this.update = function (damp, tens)
         this.update = function (density, rippleSpeed)
         {
-            //this.v += (-tens * this.p - damp * this.v);
+            // this.v += (-tens * this.p - damp * this.v);
             this.v += (-rippleSpeed * this.p - density * this.v);
             this.p += this.v;
         };

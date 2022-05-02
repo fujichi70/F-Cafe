@@ -1,0 +1,200 @@
+#cart {
+    #menu {
+        background-color: antiquewhite;
+        color: rgb(66, 16, 16);
+
+        .main-title {
+            color: rgb(66, 16, 16);
+        }
+
+        .cart-text {
+            font-size: 25px;
+            text-align: center;
+            color: antiquewhite;
+            background-color: burlywood;
+            padding: 10px 0;
+            margin-bottom: 50px;
+        }
+
+        .item-box {
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 20px 30px;
+            margin: 0 auto 10px;
+
+            .item-name--box {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+
+                .menu-icon {
+                    margin-right: 20px;
+                    .menu-icon--img {
+                        width: 50px;
+                    }
+                }
+                .item-name {
+                    padding-bottom: 10px;
+                    font-size: 20px;
+                    font-weight: bold;
+                    border-bottom: 2px solid rgb(66, 16, 16);
+                }
+            }
+
+            .item-parts {
+                display: flex;
+                align-items: center;
+                font-size: 20px;
+
+                dt {
+                    margin-right: 20px;
+                    margin: 7px;
+                }
+
+                dd {
+                    font-size: 22px;
+                    font-family: "Courier New", Courier, monospace;
+                    font-weight: bold;
+                    margin: 7px;
+                }
+            }
+        }
+        .totalprice {
+            font-family: "Courier New", Courier, monospace;
+            max-width: 100%;
+            text-align: right;
+            margin: 50px 0;
+            font-size: 18px;
+            border-bottom: 3px solid rgb(66, 16, 16);
+            span {
+                font-size: 32px;
+                font-weight: bold;
+            }
+        }
+        @media screen and (min-width: 700px) {
+            .totalprice {
+                margin: 50px 100px;
+            }
+        }
+    }
+    .cart-btn--group {
+        .order-btn--box {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            .order-btn--items {
+                margin-bottom: 25px;
+            }
+            .order-btn {
+                font-size: 18px;
+                height: 60px;
+            }
+
+            button.stripe-button-el {
+                border: none;
+                border-radius: 20px;
+                box-shadow: 2px 2px 0 #571010;
+                padding: 15px 30px;
+                background-image: none;
+                background-color: burlywood !important;
+
+                span {
+                    font-family: "Kiwi Maru", serif;
+                    background: burlywood !important;
+                    color: $sBrown;
+                    font-size: 18px;
+                    font-weight: normal;
+                    border: none;
+                    text-shadow: none;
+                    box-shadow: none;
+                    padding: 0;
+                }
+                &:hover {
+                    background-color: rgb(172, 113, 37) !important;
+                    span {
+                        background-color: rgb(172, 113, 37) !important;
+                        color: antiquewhite !important;
+                    }
+                }
+                &:active {
+                    transform: translateY(-2px);
+                    box-shadow: none;
+                    span {
+                        background-color: rgb(172, 113, 37) !important;
+                        color: antiquewhite !important;
+                    }
+                }
+            }
+            .order-text {
+                font-family: "Kiwi Maru", serif;
+                margin-bottom: 30px;
+            }
+        }
+        .back-btn--parts {
+            text-align: center;
+            .back-btn {
+                background-color: gainsboro;
+                color: rgb(69, 69, 69);
+                box-shadow: 2px 2px 0 rgb(69, 69, 69);
+                &:hover {
+                    color: gainsboro;
+                    background-color: rgb(119, 119, 119);
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 700px) {
+        .cart-btn--group {
+            .order-btn--box {
+                flex-direction: row;
+                justify-content: center;
+                .order-btn {
+                    margin: 0 30px 20px;
+                }
+            }
+        }
+    }
+}
+
+#thanks {
+    margin-bottom: 50px;
+    .thanks-title {
+        overflow: hidden;
+        margin: 100px 0;
+        text-align: center;
+        font-size: 30px;
+        animation: pikopiko 2s steps(2, start) infinite;
+    }
+
+    .thanks-text {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    .order-id {
+        font-family: "Kiwi Maru", serif;
+        text-align: center;
+        font-weight: bold;
+        font-size: 22px;
+        margin: 50px;
+    }
+
+    .thanks-btn--parts {
+        text-align: center;
+        .thanks-back-btn {
+            margin: 0 auto;
+        }
+    }
+}
+
+@keyframes pikopiko {
+    0% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(-10deg);
+    }
+}

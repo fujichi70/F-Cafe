@@ -1,186 +1,43 @@
 @charset "UTF-8";
-#news .grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto;
-      grid-template-columns: auto;
-  place-items: center;
-}
-
-#news .card {
-  height: 280px;
-  width: 300px;
-  background-color: burlywood;
-  border-radius: 10px;
-  -webkit-box-shadow: 0rem 0 1rem rgba(0, 0, 0, 0.829);
-          box-shadow: 0rem 0 1rem rgba(0, 0, 0, 0.829);
-  -webkit-transition: 0.4s ease-out;
-  transition: 0.4s ease-out;
-  position: relative;
-}
-
-#news .card01 {
-  background: url(../img/cake5.jpg) center center/cover;
-}
-
-#news .card02 {
-  background: url(../img/croissants.jpg) center center/cover;
-}
-
-#news .card:hover {
-  -webkit-transform: translateY(-20px);
-          transform: translateY(-20px);
-  -webkit-transition: 0.4s ease-out;
-  transition: 0.4s ease-out;
-}
-
-#news .card--title {
-  color: white;
-  font-weight: 300px;
-  position: absolute;
-  left: 25px;
-  top: 5px;
-}
-
-#news .bar {
-  position: absolute;
-  top: 50px;
-  left: 25px;
-  height: 5px;
-  width: 80%;
-}
-
-#news .emptybar {
-  background-color: #2e3033;
-  width: 100%;
-  height: 100%;
-}
-
-#news .filledbar {
-  position: absolute;
-  top: 0px;
-  z-index: 3;
-  width: 0px;
-  height: 100%;
-  background: #009ad9;
-  background: -webkit-gradient(linear, left top, right top, from(#691803), color-stop(65%, #963700), to(#a77a00));
-  background: linear-gradient(90deg, #691803 0%, #963700 65%, #a77a00 100%);
-  -webkit-transition: 0.6s ease-out;
-  transition: 0.6s ease-out;
-}
-
-#news .card:hover .filledbar {
-  width: 240px;
-  -webkit-transition: 0.4s ease-out;
-  transition: 0.4s ease-out;
-}
-
-#news .card--text {
-  font-family: 'Kiwi Maru', serif;
-  position: absolute;
-  left: 50%;
-  bottom: -230px;
-  width: 230px;
-  -webkit-transform: translateX(-45%);
-          transform: translateX(-45%);
-  background-color: rgba(255, 255, 255, 0.5);
-  color: black;
-  border-radius: 10px;
-  padding: 10px;
-  font-size: 18px;
-}
-
-/* ストア */
-#store .store--text {
-  font-family: "Kiwi Maru", serif;
-}
-
-#store .store--introduction {
-  position: relative;
-  margin-bottom: 40px;
-}
-
-#store .store--introduction .store--frame {
-  position: absolute;
-}
-
-#store .store--introduction .store--frame .store--frame-img {
-  -o-object-fit: contain;
-     object-fit: contain;
-  max-width: 100%;
-}
-
-#store .store--introduction .store--introduction-img .store--img-outside {
-  max-width: 100%;
-}
-
-#store .store--introduction .store--text {
-  position: absolute;
-  text-align: center;
-  bottom: 0;
-  left: 30%;
-  right: 0;
-  -webkit-transform: translate(-20%, -50%);
-          transform: translate(-20%, -50%);
-  background-color: rgba(255, 255, 255, 0.7);
-  color: black;
-  border-radius: 10px;
-  padding: 10px;
-  font-size: 16px;
-}
-
-#store .store--img-inside {
-  max-width: 100%;
-}
-
-#menu .menu--list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-#menu .menu--parts:hover .menu--text {
-  display: block;
-}
-
-#menu .menu--text {
-  position: relative;
-  display: none;
-  padding: 5px 0;
-  text-align: center;
-  margin: 0 10px;
-  color: #571010;
-  font-size: 30px;
-  border-radius: 20px;
-}
-
-#menu .menu--icon {
-  position: relative;
-  text-align: center;
-  width: 100px;
-  height: 100px;
-  padding: 5px 0 0;
-  margin: 0 10px;
-  border-radius: 50%;
-  background-color: burlywood;
-  color: #571010;
-}
-
-#menu .menu--icon-img {
-  width: 50px;
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-body {
+* {
   margin: 0;
   padding: 0;
-  background-color: antiquewhite;
-  font-family: "Permanent Marker", cursive;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+*:active {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
 }
 
 ul {
@@ -192,16 +49,29 @@ li {
   list-style: none;
 }
 
+dd {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: antiquewhite;
+  color: #310505;
+  font-family: "Permanent Marker", "Kiwi Maru", serif;
+}
+
 a {
   text-decoration: none;
   color: azure;
 }
 
-.main--title-box {
+.main-title--box {
   text-align: center;
+  margin-bottom: 70px;
 }
 
-.main--title {
+.main-title--box .main-title {
   -webkit-animation: up-chars 6.5s linear infinite;
           animation: up-chars 6.5s linear infinite;
   display: inline-block;
@@ -209,8 +79,19 @@ a {
   color: #571010;
 }
 
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+}
+
 .wrapper {
-  margin: 0 10px 40px;
+  margin: 0 20px 100px;
 }
 
 @-webkit-keyframes up-chars {
@@ -270,7 +151,7 @@ a {
   width: 30px;
   height: 2px;
   left: 6px;
-  background: #571010;
+  background: #947b5b;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
@@ -288,20 +169,31 @@ a {
 }
 
 /* ナビ開いてる時のボタン */
-.hamburger.active span:nth-child(1) {
+.sp-menu .hamburger.active span:nth-child(1) {
   top: 16px;
   left: 6px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 
-.hamburger.active span:nth-child(2), .hamburger.active span:nth-child(3) {
+.sp-menu .hamburger.active span:nth-child(2), .sp-menu .hamburger.active span:nth-child(3) {
   top: 16px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.sp-menu--list {
+.sp-menu .logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+}
+
+.sp-menu .logo img {
+  width: 80px;
+}
+
+.sp-menu .sp-menu--nav {
   position: fixed;
   z-index: 2;
   top: 0;
@@ -316,36 +208,36 @@ a {
   width: 100%;
 }
 
-.sp-menu--list .sp-menu--parts {
+.sp-menu .sp-menu--nav .sp-menu--parts {
   background: burlywood;
   margin: 0 auto;
   padding: 0;
   width: 100%;
 }
 
-.sp-menu--list .sp-menu--parts .sp-menu--title {
+.sp-menu .sp-menu--nav .sp-menu--parts .sp-menu--list {
   padding: 0;
   width: 100%;
   border-bottom: 1px solid #fff;
 }
 
-.sp-menu--list .sp-menu--parts .sp-menu--title:last-child {
+.sp-menu .sp-menu--nav .sp-menu--parts .sp-menu--list:last-child {
   padding-bottom: 0;
   border-bottom: none;
 }
 
-.sp-menu--list .sp-menu--parts .sp-menu--title:hover {
+.sp-menu .sp-menu--nav .sp-menu--parts .sp-menu--list:hover {
   background: #ffd49c;
 }
 
-.sp-menu--list .sp-menu--parts .sp-menu--title a {
+.sp-menu .sp-menu--nav .sp-menu--parts .sp-menu--list a {
   display: block;
   color: #571010;
   padding: 1em 0;
   text-decoration: none;
 }
 
-.sp-menu--list.active {
+.sp-menu .sp-menu--nav.active {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
 }
@@ -356,17 +248,28 @@ a {
 
 .pc-menu--main_menu {
   background-color: burlywood;
+  height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 10px;
+}
+
+.pc-menu--main_menu .logo {
+  padding: 0;
+}
+
+.pc-menu--main_menu .logo img {
+  width: 100px;
 }
 
 .pc-menu--main_menu li {
   position: relative;
-  margin: 0 10px;
+  margin: 10px 10px;
 }
 
 .pc-menu--sub_menu {
@@ -381,28 +284,112 @@ a {
 .fade {
   opacity: 0;
   visibility: hidden;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-  -webkit-transition: opacity 1s, -webkit-transform .7s;
-  transition: opacity 1s, -webkit-transform .7s;
-  transition: opacity 1s, transform .7s;
-  transition: opacity 1s, transform .7s, -webkit-transform .7s;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  -webkit-transition: opacity 2s, -webkit-transform 0.7s;
+  transition: opacity 2s, -webkit-transform 0.7s;
+  transition: opacity 2s, transform 0.7s;
+  transition: opacity 2s, transform 0.7s, -webkit-transform 0.7s;
 }
 
 .fade.in {
   opacity: 1;
   visibility: visible;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
-/* アコーディオンメニュー */
+/*  スマホ注文ボタン（固定）  */
+.mobileorder {
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  right: 0;
+  background: rgba(87, 16, 16, 0.596);
+  border-radius: 50%;
+}
+
+.mobileorder .mobileorder-title {
+  color: burlywood;
+  font-weight: bold;
+  position: absolute;
+  top: -25px;
+}
+
+.mobileorder .mobileorder-img--parts {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.mobileorder .mobileorder-img--parts .mobileorder-img {
+  background-color: #fde2bf;
+  border-radius: 50%;
+  width: 40px;
+}
+
+.mobileorder .mobileorder-text {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  line-height: 12px;
+  color: #fde2bf;
+  text-align: center;
+}
+
+.btn {
+  font-family: "Kiwi Maru", serif;
+  font-size: 16px;
+  border: none;
+  background-color: burlywood;
+  color: #571010;
+  -webkit-box-shadow: 2px 2px 0 #571010;
+          box-shadow: 2px 2px 0 #571010;
+  padding: 15px 30px;
+  border-radius: 20px;
+}
+
+.btn:hover {
+  background-color: #ac7125;
+  color: antiquewhite;
+}
+
+.btn:active {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+@media screen and (min-width: 700px) {
+  .main-title--box .main-title {
+    margin-bottom: 50px;
+  }
+  .sp-menu {
+    display: none;
+  }
+  .pc-menu {
+    display: initial;
+    font-size: 20px;
+  }
+  .pc-menu .pc-sub_menu--parts .pc-sub_menu--list {
+    display: none;
+  }
+}
+
 /* メイン */
 #main {
   background: url(img/cheers.jpg) center center/cover;
   height: 100vh;
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 #main .main-text {
@@ -411,7 +398,7 @@ a {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  color: white;
+  color: antiquewhite;
   opacity: 0;
   font-size: 2em;
   overflow: hidden;
@@ -424,28 +411,28 @@ a {
 
 #main .chars {
   display: inline-block;
-  -webkit-animation: animate-chars 0.5s 1 normal both;
-          animation: animate-chars 0.5s 1 normal both;
+  -webkit-animation: animate-chars .5s both;
+          animation: animate-chars .5s both;
 }
 
 #main .chars:nth-child(1) {
-  -webkit-animation-delay: 0.04s;
-          animation-delay: 0.04s;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
 }
 
 #main .chars:nth-child(2) {
-  -webkit-animation-delay: 0.08s;
-          animation-delay: 0.08s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 
 #main .chars:nth-child(3) {
-  -webkit-animation-delay: 0.12s;
-          animation-delay: 0.12s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 
 #main .chars:nth-child(4) {
-  -webkit-animation-delay: 0.16s;
-          animation-delay: 0.16s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
 #main .main-img--parts {
@@ -458,28 +445,6 @@ a {
   left: 0;
   width: 150%;
   margin-left: auto;
-}
-
-@-webkit-keyframes sway {
-  from {
-    -webkit-transform: skew(-15deg) rotateX(10deg);
-            transform: skew(-15deg) rotateX(10deg);
-  }
-  to {
-    -webkit-transform: skew(15deg) rotateX(-10deg);
-            transform: skew(15deg) rotateX(-10deg);
-  }
-}
-
-@keyframes sway {
-  from {
-    -webkit-transform: skew(-15deg) rotateX(10deg);
-            transform: skew(-15deg) rotateX(10deg);
-  }
-  to {
-    -webkit-transform: skew(15deg) rotateX(-10deg);
-            transform: skew(15deg) rotateX(-10deg);
-  }
 }
 
 @-webkit-keyframes animate-chars {
@@ -508,27 +473,119 @@ a {
   }
 }
 
-/* フッター */
-#footer {
-  overflow: hidden;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 500px;
-  color: #420101;
-}
-
-/* PCメニュー */
 @media screen and (min-width: 700px) {
-  .sp-menu {
-    display: none;
-  }
-  .pc-menu {
-    display: initial;
-  }
   #main {
     height: 95vh;
   }
+}
+
+#news .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(350px))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(350px));
+  place-items: center;
+}
+
+#news .card {
+  width: 350px;
+  height: 350px;
+  background-color: burlywood;
+  border-radius: 10px;
+  -webkit-box-shadow: 0rem 0 1rem rgba(0, 0, 0, 0.829);
+          box-shadow: 0rem 0 1rem rgba(0, 0, 0, 0.829);
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+  position: relative;
+}
+
+#news .card01 {
+  background: url(img/food/cake5.png) center center/cover;
+}
+
+#news .card02 {
+  background: url(img/food/croissants.jpg) center center/cover;
+}
+
+#news .card03 {
+  background: url(img/storeoutside.jpg) center center/cover;
+}
+
+#news .card04 {
+  background: url(img/coffeeall.jpg) center center/cover;
+}
+
+#news .card:hover {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+}
+
+#news .card-title {
+  font-family: "Kiwi Maru", serif;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #310505;
+  font-size: 20px;
+  width: 300px;
+  font-weight: 300px;
+  position: absolute;
+  left: 25px;
+  top: 15px;
+}
+
+#news .bar {
+  position: absolute;
+  top: 50px;
+  left: 25px;
+  height: 5px;
+  width: 80%;
+}
+
+#news .emptybar {
+  background-color: #2e3033;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#news .filledbar {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 0px;
+  height: 100%;
+  background: #009ad9;
+  background: -webkit-gradient(linear, left top, right top, from(#691803), color-stop(65%, #963700), to(#a77a00));
+  background: linear-gradient(90deg, #691803 0%, #963700 65%, #a77a00 100%);
+  -webkit-transition: 0.6s ease-out;
+  transition: 0.6s ease-out;
+}
+
+#news .card:hover .filledbar {
+  width: 280px;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+}
+
+#news .card-text {
+  font-family: "Kiwi Maru", serif;
+  position: absolute;
+  left: 50%;
+  bottom: -280px;
+  width: 270px;
+  line-height: 30px;
+  -webkit-transform: translateX(-45%);
+          transform: translateX(-45%);
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #310505;
+  border-radius: 10px;
+  padding: 10px;
+  padding-left: 15px;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 700px) {
   #news {
     margin-bottom: 50px;
   }
@@ -547,6 +604,880 @@ a {
     left: 50px;
     -webkit-transition: 0.4s ease-out;
     transition: 0.4s ease-out;
+  }
+}
+
+/* ストア */
+#store .store-group {
+  font-family: "Kaisei Opti", serif;
+}
+
+#store .store-group .store-img--box {
+  overflow: hidden;
+  position: relative;
+  height: 300px;
+}
+
+#store .store-group .store-img--box img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-animation: display 20s infinite;
+          animation: display 20s infinite;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#store .store-group .store-img--box img:nth-child(2) {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+#store .store-group .store-img--box img:nth-child(3) {
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+}
+
+#store .store-group .store-img--box img:nth-child(4) {
+  -webkit-animation-delay: 12s;
+          animation-delay: 12s;
+}
+
+#store .store-group .store-img--box img:nth-child(5) {
+  -webkit-animation-delay: 16s;
+          animation-delay: 16s;
+}
+
+#store .store-group .store-text--box .store-title {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0 0 40px;
+}
+
+#store .store-group .store-text--box .store-br {
+  display: none;
+}
+
+#store .store-group .store-text--box .store-text {
+  font-size: 20px;
+  line-height: 35px;
+  text-align: left;
+}
+
+@-webkit-keyframes display {
+  0% {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+    opacity: 0;
+  }
+  10% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    -webkit-transform: translateX(-200px);
+            transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(-200px);
+            transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+
+@keyframes display {
+  0% {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+    opacity: 0;
+  }
+  10% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    -webkit-transform: translateX(-200px);
+            transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(-200px);
+            transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  #store .store-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #store .store-group .store-img--box {
+    height: 550px;
+  }
+  #store .store-group .store-text--box {
+    width: 50%;
+    padding-left: 20px;
+  }
+  #store .store-group .store-text--box .store-title {
+    font-size: 40px;
+    margin: 0 0 40px;
+  }
+  #store .store-group .store-text--box .store-text {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  #store .store-group .store-img--box {
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+#menu {
+  padding: 100px 0;
+  background: #310505;
+  color: antiquewhite;
+}
+
+#menu .wrapper {
+  margin-bottom: 50px;
+}
+
+#menu .main-title {
+  color: antiquewhite;
+}
+
+#menu .contents-text {
+  padding: 0 20px 10px;
+  font-size: 25px;
+}
+
+#menu .menu-list .menu-type--box {
+  margin: 50px 0;
+}
+
+#menu .menu-list .menu-type--box .menu-parts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+#menu .menu-list .menu-type--box .menu-icon {
+  text-align: center;
+  padding: 5px 0 0;
+  margin: 0 10px;
+}
+
+#menu .menu-list .menu-type--box .menu-icon .menu-icon--img {
+  width: 50px;
+}
+
+#menu .menu-list .menu-type--box .menu-text {
+  padding: 5px 0;
+  text-align: center;
+  margin: 0 10px;
+  font-size: 35px;
+  border-radius: 20px;
+}
+
+#menu .menu-list .drink {
+  font-size: 21px;
+}
+
+#menu .menu-list .drink .drink-size {
+  font-size: 25px;
+  margin-bottom: 100px;
+}
+
+#menu .menu-list .drink .drink-size .size-img {
+  width: 350px;
+  margin: 0 auto;
+}
+
+#menu .menu-list .drink .drink-size .size-img img {
+  width: 350px;
+}
+
+#menu .menu-list .drink .drink-parts {
+  margin-bottom: 100px;
+}
+
+#menu .menu-list .drink .drink-parts .drink-list {
+  padding: 5px 0;
+  border-bottom: 1px dotted antiquewhite;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
+}
+
+#menu .menu-list .drink .drink-parts .drink-list dt {
+  text-align: left;
+  width: 43%;
+}
+
+#menu .menu-list .drink .drink-parts .drink-list dd {
+  max-width: 57%;
+  text-align: center;
+}
+
+#menu .menu-list .food .food-type {
+  margin-bottom: 100px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+#menu .menu-list .food .food-type:last-child {
+  margin-bottom: 0;
+}
+
+#menu .menu-list .food .food-type::-webkit-scrollbar {
+  height: 10px;
+}
+
+#menu .menu-list .food .food-type::-webkit-scrollbar-thumb {
+  background: #866d4d;
+  border-radius: 5px;
+}
+
+#menu .menu-list .food .food-type::-webkit-scrollbar-track-piece {
+  border-radius: 5px;
+  background: #f0f0ed;
+}
+
+#menu .menu-list .food .food-type .food-type--text {
+  margin: 20px;
+  font-size: 35px;
+}
+
+#menu .menu-list .food .food-type .food-list {
+  position: relative;
+  margin: 0 10px 20px;
+  overflow: hidden;
+  min-width: 250px;
+}
+
+#menu .menu-list .food .food-type .food-list .food-img--parts {
+  font-family: "Kiwi Maru", serif;
+}
+
+#menu .menu-list .food .food-type .food-list .food-img--parts img {
+  width: 250px;
+}
+
+#menu .menu-list .food .food-type .food-list .food-parts .food-text {
+  margin: 20px;
+  font-size: 21px;
+}
+
+#menu .menu-list .food .flex {
+  text-align: center;
+}
+
+#menu .menu-list .food .special-text {
+  letter-spacing: 0.4rem;
+  position: absolute;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+  top: 18px;
+  left: -50px;
+  color: #fff;
+  background-color: #a31313;
+  padding: 13px 50px;
+  font-size: 20px;
+  line-height: 1px;
+}
+
+@media screen and (min-width: 700px) {
+  #menu .menu-list .drink .drink-size .size-img {
+    margin: 0 30px;
+  }
+}
+
+#map .wrapper {
+  padding: 100px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#map .map-text--box {
+  margin-bottom: 30px;
+}
+
+#map .map-google--parts {
+  margin: 60px 0;
+  text-align: center;
+}
+
+#map .map-google--parts .map-google {
+  width: 100%;
+}
+
+/* フッター */
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 500px;
+  color: #420101;
+}
+
+#footer .footer-menu--nav {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 1;
+}
+
+#footer .footer-menu--nav .footer-menu--parts .footer-menu--list {
+  padding: 10px 0;
+  text-align: center;
+  line-height: 50px;
+}
+
+#footer .footer-menu--nav .footer-menu--parts .footer-menu--list a {
+  cursor: pointer;
+  font-size: 30px;
+  color: antiquewhite;
+}
+
+#footer .footer-sns {
+  z-index: 1;
+  position: absolute;
+  bottom: 30px;
+}
+
+#footer .footer-sns .footer-sns--list {
+  margin-left: 30px;
+}
+
+#footer .footer-sns .footer-sns--list img {
+  width: 40px;
+}
+
+@media screen and (min-width: 850px) {
+  #footer .footer-menu--nav {
+    top: 10%;
+    left: 10%;
+  }
+  #footer .footer-menu--nav .footer-menu--parts .footer-menu--list {
+    text-align: left;
+    margin-left: 20px;
+    padding: 0;
+  }
+  #footer .footer-menu--nav .footer-menu--parts .footer-menu--list a {
+    cursor: pointer;
+    font-size: 22px;
+    color: antiquewhite;
+  }
+  #footer .footer-menu--nav .footer-menu--parts .footer-menu--list a:hover {
+    color: #ac7125;
+  }
+  #footer .footer-menu--nav .footer-menu--parts .footer-menu--list a:focus {
+    color: #ac7125;
+  }
+  #footer .footer-sns {
+    z-index: 1;
+    position: absolute;
+    bottom: 30px;
+  }
+  #footer .footer-sns .footer-sns--list {
+    margin-left: 30px;
+  }
+  #footer .footer-sns .footer-sns--list img {
+    width: 40px;
+  }
+}
+
+/*  スマホ注文　*/
+#mobileorder .mobileorder .mobileorder-img--parts .mobileorder-img {
+  background-color: none;
+}
+
+#mobileorder .mobileorder-visual--parts {
+  position: absolute;
+  top: 10px;
+  left: 600px;
+}
+
+#mobileorder .btn--parts {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-family: "Courier New", Courier, monospace;
+  margin: 10px 10px 10px 0;
+  text-align: right;
+  z-index: 9999;
+}
+
+#mobileorder #menu {
+  background-color: antiquewhite;
+  color: #421010;
+}
+
+#mobileorder #menu .main-title {
+  color: #421010;
+}
+
+#mobileorder #menu .main-text--box {
+  border-radius: 5px;
+  margin: 20px auto 40px;
+  padding: 25px 20px 20px 20px;
+  position: relative;
+  z-index: 0;
+  background-color: #fceec1;
+  display: inline-block;
+}
+
+#mobileorder #menu .main-text--box:before {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  content: "";
+  display: block;
+  margin: 4px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: -1;
+}
+
+#mobileorder #menu .main-text--box:after {
+  font-size: 18px;
+  background-color: #eadbba;
+  background-image: radial-gradient(#fff 20%, transparent 0), radial-gradient(#fff 20%, transparent 0);
+  /* 水玉の色 */
+  background-position: 0 0, 8px 8px;
+  /* 水玉の距離 */
+  background-size: 15px 15px;
+  /* 水玉の大きさ */
+  border-left: 2px dotted rgba(0, 0, 0, 0.1);
+  border-right: 2px dotted rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  content: "注文方法";
+  display: block;
+  padding: 5px 20px;
+  text-align: center;
+  position: absolute;
+  top: -18px;
+  left: 20px;
+  transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -webkit-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+}
+
+#mobileorder #menu .main-text--box .main-text {
+  font-size: 18px;
+}
+
+#mobileorder .menu-list {
+  color: #421010;
+}
+
+#mobileorder .menu-list .menu-text {
+  color: #421010;
+}
+
+#mobileorder .menu-list .drink .grid {
+  -ms-grid-columns: (minmax(280px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+  justify-items: center;
+}
+
+#mobileorder .menu-list .drink .drink-box {
+  margin-bottom: 70px;
+}
+
+#mobileorder .menu-list .drink .drink-box .drink-box--parts {
+  width: 280px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+#mobileorder .menu-list .drink .drink-box .drink-box--parts .card-img {
+  text-align: center;
+}
+
+#mobileorder .menu-list .drink .drink-box .drink-box--parts img {
+  width: 200px;
+}
+
+#mobileorder .menu-list .drink .drink-box .drink-box--parts .card-title {
+  margin: 15px 0 10px;
+  text-align: center;
+}
+
+#mobileorder .menu-list .drink .drink-box .drink-box--parts .card-parts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 22px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  padding: 10px;
+}
+
+#mobileorder .menu-list .drink .drink-box .drink-box--parts .card-parts .card-sizeprice {
+  padding: 10px 0;
+  text-align: left;
+}
+
+#mobileorder .menu-list .drink .drink-box .drink-box--parts .card-parts .spinner-container {
+  margin-left: 20px;
+}
+
+#mobileorder .menu-list .food .food-type .food-list {
+  width: 250px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+#mobileorder .menu-list .food .food-type .food-list .food-img--parts img {
+  border-radius: 20px;
+}
+
+#mobileorder .menu-list .food .food-type .food-list .food-parts .food-text {
+  margin: 5px;
+}
+
+#mobileorder .menu-list .food .food-type .food-list .food-parts .food-price {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 15px;
+}
+
+#mobileorder .menu-list .spinner-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+#mobileorder .menu-list .spinner {
+  width: 50px;
+  padding: 0;
+  text-align: center;
+  border: none;
+  background: none;
+  outline: none;
+  pointer-events: none;
+}
+
+#mobileorder .menu-list .spinner::-webkit-inner-spin-button,
+#mobileorder .menu-list .spinner::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+#mobileorder .menu-list .spinner-minus,
+#mobileorder .menu-list .spinner-plus {
+  display: block;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+  line-height: 35px;
+}
+
+#mobileorder .menu-list .disabled {
+  opacity: 0.3;
+  cursor: inherit;
+}
+
+#cart #menu {
+  background-color: antiquewhite;
+  color: #421010;
+}
+
+#cart #menu .main-title {
+  color: #421010;
+}
+
+#cart #menu .cart-text {
+  font-size: 25px;
+  text-align: center;
+  color: antiquewhite;
+  background-color: burlywood;
+  padding: 10px 0;
+  margin-bottom: 50px;
+}
+
+#cart #menu .item-box {
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px 30px;
+  margin: 0 auto 10px;
+}
+
+#cart #menu .item-box .item-name--box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+#cart #menu .item-box .item-name--box .menu-icon {
+  margin-right: 20px;
+}
+
+#cart #menu .item-box .item-name--box .menu-icon .menu-icon--img {
+  width: 50px;
+}
+
+#cart #menu .item-box .item-name--box .item-name {
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 2px solid #421010;
+}
+
+#cart #menu .item-box .item-parts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 20px;
+}
+
+#cart #menu .item-box .item-parts dt {
+  margin-right: 20px;
+  margin: 7px;
+}
+
+#cart #menu .item-box .item-parts dd {
+  font-size: 22px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  margin: 7px;
+}
+
+#cart #menu .totalprice {
+  font-family: "Courier New", Courier, monospace;
+  max-width: 100%;
+  text-align: right;
+  margin: 50px 0;
+  font-size: 18px;
+  border-bottom: 3px solid #421010;
+}
+
+#cart #menu .totalprice span {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 700px) {
+  #cart #menu .totalprice {
+    margin: 50px 100px;
+  }
+}
+
+#cart .cart-btn--group .order-btn--box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+#cart .cart-btn--group .order-btn--box .order-btn--items {
+  margin-bottom: 25px;
+}
+
+#cart .cart-btn--group .order-btn--box .order-btn {
+  font-size: 18px;
+  height: 60px;
+}
+
+#cart .cart-btn--group .order-btn--box button.stripe-button-el {
+  border: none;
+  border-radius: 20px;
+  -webkit-box-shadow: 2px 2px 0 #571010;
+          box-shadow: 2px 2px 0 #571010;
+  padding: 15px 30px;
+  background-image: none;
+  background-color: burlywood !important;
+}
+
+#cart .cart-btn--group .order-btn--box button.stripe-button-el span {
+  font-family: "Kiwi Maru", serif;
+  background: burlywood !important;
+  color: #571010;
+  font-size: 18px;
+  font-weight: normal;
+  border: none;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 0;
+}
+
+#cart .cart-btn--group .order-btn--box button.stripe-button-el:hover {
+  background-color: #ac7125 !important;
+}
+
+#cart .cart-btn--group .order-btn--box button.stripe-button-el:hover span {
+  background-color: #ac7125 !important;
+  color: antiquewhite !important;
+}
+
+#cart .cart-btn--group .order-btn--box button.stripe-button-el:active {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#cart .cart-btn--group .order-btn--box button.stripe-button-el:active span {
+  background-color: #ac7125 !important;
+  color: antiquewhite !important;
+}
+
+#cart .cart-btn--group .order-btn--box .order-text {
+  font-family: "Kiwi Maru", serif;
+  margin-bottom: 30px;
+}
+
+#cart .cart-btn--group .back-btn--parts {
+  text-align: center;
+}
+
+#cart .cart-btn--group .back-btn--parts .back-btn {
+  background-color: gainsboro;
+  color: #454545;
+  -webkit-box-shadow: 2px 2px 0 #454545;
+          box-shadow: 2px 2px 0 #454545;
+}
+
+#cart .cart-btn--group .back-btn--parts .back-btn:hover {
+  color: gainsboro;
+  background-color: #777777;
+}
+
+@media screen and (min-width: 700px) {
+  #cart .cart-btn--group .order-btn--box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #cart .cart-btn--group .order-btn--box .order-btn {
+    margin: 0 30px 20px;
+  }
+}
+
+#thanks {
+  margin-bottom: 50px;
+}
+
+#thanks .thanks-title {
+  overflow: hidden;
+  margin: 100px 0;
+  text-align: center;
+  font-size: 30px;
+  -webkit-animation: pikopiko 2s steps(2, start) infinite;
+          animation: pikopiko 2s steps(2, start) infinite;
+}
+
+#thanks .thanks-text {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+#thanks .order-id {
+  font-family: "Kiwi Maru", serif;
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+  margin: 50px;
+}
+
+#thanks .thanks-btn--parts {
+  text-align: center;
+}
+
+#thanks .thanks-btn--parts .thanks-back-btn {
+  margin: 0 auto;
+}
+
+@-webkit-keyframes pikopiko {
+  0% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  100% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+}
+
+@keyframes pikopiko {
+  0% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  100% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
   }
 }
 /*# sourceMappingURL=style.css.map */

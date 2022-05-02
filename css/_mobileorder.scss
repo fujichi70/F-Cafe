@@ -1,0 +1,211 @@
+/*  スマホ注文　*/
+// 注文間違えがないようにフォントおよびフォントサイズ変更
+#mobileorder {
+    .mobileorder {
+        .mobileorder-img--parts {
+            .mobileorder-img {
+                background-color: none;
+            }
+        }
+    }
+
+    .mobileorder-visual--parts {
+        position: absolute;
+        top: 10px;
+        left: 600px;
+    }
+
+    // ページ下部に固定（カートに追加ボタン）
+    .btn--parts {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: "Courier New", Courier, monospace;
+        margin: 10px 10px 10px 0;
+        text-align: right;
+        z-index: 9999;
+    }
+
+    #menu {
+        background-color: antiquewhite;
+        color: rgb(66, 16, 16);
+
+        .main-title {
+            color: rgb(66, 16, 16);
+        }
+
+        .main-text--box {
+            border-radius: 5px;
+            margin: 20px auto 40px;
+            padding: 25px 20px 20px 20px;
+            position: relative;
+            z-index: 0;
+            background-color: rgb(252, 238, 193);
+            display: inline-block;
+            &:before {
+                border: 1px solid #fff;
+                border-radius: 5px;
+                content: "";
+                display: block;
+                margin: 4px;
+                position: absolute;
+                top: 0px;
+                bottom: 0px;
+                left: 0px;
+                right: 0px;
+                z-index: -1;
+            }
+            &:after {
+                font-size: 18px;
+                background-color: rgb(234, 219, 186);
+                background-image: radial-gradient(#fff 20%, transparent 0), radial-gradient(#fff 20%, transparent 0); /* 水玉の色 */
+                background-position: 0 0, 8px 8px; /* 水玉の距離 */
+                background-size: 15px 15px; /* 水玉の大きさ */
+                border-left: 2px dotted rgba(0, 0, 0, 0.1);
+                border-right: 2px dotted rgba(0, 0, 0, 0.1);
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+                content: "注文方法";
+                display: block;
+                padding: 5px 20px;
+                text-align: center;
+                position: absolute;
+                top: -18px;
+                left: 20px;
+                transform: rotate(-3deg);
+                -moz-transform: rotate(-3deg);
+                -webkit-transform: rotate(-3deg);
+                -o-transform: rotate(-3deg);
+            }
+
+            .main-text {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .menu-list {
+        color: rgb(66, 16, 16);
+
+        .menu-text {
+            color: rgb(66, 16, 16);
+        }
+
+        .drink {
+            // メニューカード
+            .grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 15px;
+                justify-items: center;
+            }
+
+            .drink-box {
+                margin-bottom: 70px;
+                .drink-box--parts {
+                    width: 280px;
+                    background-color: #fff;
+                    border-radius: 20px;
+                    padding: 10px;
+                    .card-img {
+                        text-align: center;
+                    }
+                    img {
+                        width: 200px;
+                    }
+                    .card-title {
+                        margin: 15px 0 10px;
+                        text-align: center;
+                    }
+                    .card-parts {
+                        display: flex;
+                        justify-content: center;
+                        font-size: 22px;
+                        font-family: "Courier New", Courier, monospace;
+                        font-weight: bold;
+                        padding: 10px;
+                        .card-sizeprice {
+                            padding: 10px 0;
+                            text-align: left;
+                        }
+
+                        .spinner-container {
+                            margin-left: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .food {
+            .food-type {
+                .food-list {
+                    width: 250px;
+                    background-color: #fff;
+                    border-radius: 20px;
+                    padding: 10px;
+                    margin-bottom: 30px;
+                    .food-img--parts {
+                        img {
+                            border-radius: 20px;
+                        }
+                    }
+                    .food-parts {
+                        .food-text {
+                            margin: 5px;
+                        }
+                        .food-price {
+                            font-family: "Courier New", Courier, monospace;
+                            font-size: 22px;
+                            font-weight: bold;
+                            margin: 15px;
+                        }
+                    }
+                }
+            }
+        }
+
+        // 商品増減ボタン
+        .spinner-container {
+            display: flex;
+            justify-content: center;
+            user-select: none;
+            -ms-user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -webkit-touch-callout: none;
+        }
+
+        .spinner {
+            width: 50px;
+            padding: 0;
+            text-align: center;
+            border: none;
+            background: none;
+            outline: none;
+            pointer-events: none;
+        }
+
+        .spinner::-webkit-inner-spin-button,
+        .spinner::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+        }
+
+        .spinner-minus,
+        .spinner-plus {
+            display: block;
+            width: 35px;
+            height: 35px;
+            text-align: center;
+            border: 1px solid #000;
+            border-radius: 50%;
+            cursor: pointer;
+            line-height: 35px;
+        }
+
+        .disabled {
+            opacity: 0.3;
+            cursor: inherit;
+        }
+        // ここまで
+    }
+}

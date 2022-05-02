@@ -1,52 +1,165 @@
 #menu {
-    .menu--list {
-        display: flex;
+    padding: 100px 0;
+    background: rgb(49, 5, 5);
+    color: antiquewhite;
+
+    // メニュー共通レイアウト
+    .wrapper {
+        margin-bottom: 50px;
     }
 
-	.menu--parts {
-		&:hover .menu--text {
-			display: block;
-		}
-	}
-	
-    .menu--text {
-		position: relative;
-        display: none;
-		padding: 5px 0;
-        text-align: center;
-        margin: 0 10px;
-        color: $sBrown;
-        font-size: 30px;
-        border-radius: 20px;
-
-        // &::before {
-        //     content: "";
-        //     position: absolute;
-        //     top: 100%;
-        //     left: 33%;
-        //     border: 15px solid transparent;
-        //     border-top: 15px solid $sBrown;
-        // }
+    .main-title {
+        color: antiquewhite;
     }
 
-    .menu--icon {
-        position: relative;
-        text-align: center;
-        width: 100px;
-        height: 100px;
-        padding: 5px 0 0;
-        margin: 0 10px;
-        border-radius: 50%;
-        background-color: burlywood;
-        color: $sBrown;
+    // メニュー共通テキスト
+    .contents-text {
+        padding: 0 20px 10px;
+        font-size: 25px;
     }
 
-    .menu--icon-img {
-        width: 50px;
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    // ドリンク・フード共通部分
+    .menu-list {
+        .menu-type--box {
+            margin: 50px 0;
+
+            .menu-parts {
+                display: flex;
+                align-items: center;
+                margin-bottom: 30px;
+            }
+
+            .menu-icon {
+                text-align: center;
+                padding: 5px 0 0;
+                margin: 0 10px;
+
+                .menu-icon--img {
+                    width: 50px;
+                }
+            }
+
+            .menu-text {
+                padding: 5px 0;
+                text-align: center;
+                margin: 0 10px;
+                font-size: 35px;
+                border-radius: 20px;
+            }
+        }
+
+        .drink {
+            font-size: 21px;
+
+            .drink-size {
+                font-size: 25px;
+                margin-bottom: 100px;
+
+                .size-img {
+                    width: 350px;
+                    margin: 0 auto;
+                    img {
+                        width: 350px;
+                    }
+                }
+            }
+
+            .drink-parts {
+                margin-bottom: 100px;
+                .drink-list {
+                    padding: 5px 0;
+                    border-bottom: 1px dotted antiquewhite;
+                    display: flex;
+                    justify-content: space-around;
+                    position: relative;
+
+                    dt {
+                        text-align: left;
+                        width: 43%;
+                    }
+
+                    dd {
+                        max-width: 57%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .food {
+            .food-type {
+                margin-bottom: 100px;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                -webkit-overflow-scrolling: touch;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &::-webkit-scrollbar {
+                    height: 10px;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background: rgb(134, 109, 77);
+                    border-radius: 5px;
+                }
+                &::-webkit-scrollbar-track-piece {
+                    border-radius: 5px;
+                    background: #f0f0ed;
+                }
+
+                .food-type--text {
+                    margin: 20px;
+                    font-size: 35px;
+                }
+
+                .food-list {
+                    position: relative;
+                    margin: 0 10px 20px;
+                    overflow: hidden;
+                    min-width: 250px;
+
+                    .food-img--parts {
+                        font-family: "Kiwi Maru", serif;
+                        img {
+                            width: 250px;
+                        }
+                    }
+
+                    .food-parts {
+                        .food-text {
+                            margin: 20px;
+                            font-size: 21px;
+                        }
+                    }
+                }
+            }
+
+            .flex {
+                text-align: center;
+            }
+
+            .special-text {
+                letter-spacing: 0.4rem;
+                position: absolute;
+                transform: rotate(-30deg);
+                top: 18px;
+                left: -50px;
+                color: #fff;
+                background-color: rgb(163, 19, 19);
+                padding: 13px 50px;
+                font-size: 20px;
+                line-height: 1px;
+            }
+        }
+        @media screen and (min-width: 700px) {
+            .drink {
+                .drink-size {
+                    .size-img {
+                        margin: 0 30px;
+                    }
+                }
+            }
+        }
     }
 }
