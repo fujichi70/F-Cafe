@@ -59,9 +59,9 @@
             &:after {
                 font-size: 18px;
                 background-color: rgb(234, 219, 186);
-                background-image: radial-gradient(#fff 20%, transparent 0), radial-gradient(#fff 20%, transparent 0); /* 水玉の色 */
-                background-position: 0 0, 8px 8px; /* 水玉の距離 */
-                background-size: 15px 15px; /* 水玉の大きさ */
+                background-image: radial-gradient(#fff 20%, transparent 0), radial-gradient(#fff 20%, transparent 0);
+                background-position: 0 0, 8px 8px;
+                background-size: 15px 15px;
                 border-left: 2px dotted rgba(0, 0, 0, 0.1);
                 border-right: 2px dotted rgba(0, 0, 0, 0.1);
                 box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);

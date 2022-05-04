@@ -406,6 +406,7 @@
 		</div>
 	</section>
 
+	<a href="registration.php" class="btn">登録画面へ</a>
 
 	<!-- ページ共通（フッター） -->
 	<?php include "./include/footer.php"; ?>

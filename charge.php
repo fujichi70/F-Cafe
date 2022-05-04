@@ -3,6 +3,9 @@
 require 'vendor/autoload.php';
 require 'db_connection.php';
 
+header('X-FRAME-OPTIONS:DENY');
+
+
 session_start();
 
 \Stripe\Stripe::setApiKey('sk_test_51KtNy2ANSB1K0zfA67O91pgQZR6wVg3VCFnwJd2RjBrJDoycuu2b12eWV1swgczdfhcWKuNKq4NWxv3ZKmvSyRmM00kAfU4fHa');
@@ -29,6 +32,8 @@ try {
 			'item_quantity' => $buyItem,
 			'pay' => '1',
 			'created_at' => null,
+			'completed_flag' => '0',
+			'deleted_flag' => '0',
 		];
 
 		$count = 0;

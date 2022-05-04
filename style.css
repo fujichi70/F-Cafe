@@ -368,6 +368,22 @@ a {
           box-shadow: none;
 }
 
+.back-btn--parts {
+  text-align: center;
+}
+
+.back-btn--parts .back-btn {
+  background-color: gainsboro;
+  color: #454545;
+  -webkit-box-shadow: 2px 2px 0 #454545;
+          box-shadow: 2px 2px 0 #454545;
+}
+
+.back-btn--parts .back-btn:hover {
+  color: gainsboro;
+  background-color: #777777;
+}
+
 @media screen and (min-width: 700px) {
   .main-title--box .main-title {
     margin-bottom: 50px;
@@ -1075,11 +1091,8 @@ a {
   font-size: 18px;
   background-color: #eadbba;
   background-image: radial-gradient(#fff 20%, transparent 0), radial-gradient(#fff 20%, transparent 0);
-  /* 水玉の色 */
   background-position: 0 0, 8px 8px;
-  /* 水玉の距離 */
   background-size: 15px 15px;
-  /* 水玉の大きさ */
   border-left: 2px dotted rgba(0, 0, 0, 0.1);
   border-right: 2px dotted rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
@@ -1393,22 +1406,6 @@ a {
   margin-bottom: 30px;
 }
 
-#cart .cart-btn--group .back-btn--parts {
-  text-align: center;
-}
-
-#cart .cart-btn--group .back-btn--parts .back-btn {
-  background-color: gainsboro;
-  color: #454545;
-  -webkit-box-shadow: 2px 2px 0 #454545;
-          box-shadow: 2px 2px 0 #454545;
-}
-
-#cart .cart-btn--group .back-btn--parts .back-btn:hover {
-  color: gainsboro;
-  background-color: #777777;
-}
-
 @media screen and (min-width: 700px) {
   #cart .cart-btn--group .order-btn--box {
     -webkit-box-orient: horizontal;
@@ -1479,5 +1476,185 @@ a {
     -webkit-transform: rotate(-10deg);
             transform: rotate(-10deg);
   }
+}
+
+.staff-title {
+  font-size: 22px;
+  color: #310505;
+  margin: 20px 0 30px;
+}
+
+.staff-text {
+  font-size: 16px;
+  color: #310505;
+}
+
+.error {
+  color: #b53535;
+}
+
+#login {
+  font-family: "Courier New", Courier, monospace;
+  line-height: 50px;
+}
+
+#login .login-title--group {
+  margin-bottom: 40px;
+}
+
+#login .login-group dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#login .login-group dl dt {
+  width: 100px;
+  padding-bottom: 20px;
+}
+
+#login .login-group dl dd {
+  width: 73%;
+  padding-bottom: 20px;
+}
+
+#login .login-group dl dd .login-inputarea {
+  width: 100%;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+@media screen and (min-width: 700px) {
+  #login .login-group dl dd .login-inputarea {
+    width: 450px;
+    border-radius: 20px;
+    padding: 10px 20px;
+  }
+}
+
+#orderConfirm {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+}
+
+#orderConfirm .order-title {
+  color: #310505;
+  border-radius: 5px;
+  margin: 20px auto 0;
+  padding: 25px 20px 20px 20px;
+  position: relative;
+  z-index: 0;
+  background-color: #fceec1;
+  display: inline-block;
+}
+
+#orderConfirm .order-title:before {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  content: "";
+  display: block;
+  margin: 4px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: -1;
+}
+
+#orderConfirm .order-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#orderConfirm .order-box .order-text--group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 30px 0 10px;
+}
+
+#orderConfirm .order-box .order-text--group .order-number {
+  padding: 10px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+#orderConfirm .order-box .order-text--group .btn {
+  padding: 10px 15px;
+}
+
+#orderConfirm .order-box .ready-group {
+  margin: 30px 0 10px;
+}
+
+#orderConfirm .order-table {
+  text-align: center;
+  border-collapse: collapse;
+}
+
+#orderConfirm .order-table thead {
+  border-bottom: double 2px #707070;
+}
+
+#orderConfirm .order-table thead tr th {
+  border: 1px solid #707070;
+  padding: 10px;
+  width: 200px;
+}
+
+#orderConfirm .order-table thead tr .back-btn--parts .back-btn {
+  padding: 10px 15px;
+}
+
+#orderConfirm .order-table tbody tr td {
+  border: 1px solid #707070;
+  padding: 10px;
+  width: 200px;
+}
+
+#orderConfirm .order-table tbody tr td .pay-text {
+  font-size: 17px;
+  color: red;
+}
+
+#orderConfirm .order-table tbody tr .back-btn--parts .back-btn {
+  padding: 10px 15px;
+}
+
+@media screen and (min-width: 700px) {
+  #orderConfirm {
+    font-size: 20px;
+  }
+  #orderConfirm .order-text--group .order-number {
+    font-size: 20px;
+  }
+  #orderConfirm .order-text--group .btn {
+    padding: 12px 20px;
+  }
+  #orderConfirm .order-table thead tr .back-btn--parts .back-btn {
+    padding: 13px 20px;
+  }
+  #orderConfirm .order-table tbody tr td .pay-text {
+    font-size: 20px;
+  }
+  #orderConfirm .order-table tbody tr .back-btn--parts .back-btn {
+    padding: 13px 20px;
+  }
+}
+
+.logout-btn--parts {
+  text-align: right;
+  margin: 0 10px 10px 0;
 }
 /*# sourceMappingURL=style.css.map */

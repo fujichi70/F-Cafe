@@ -40,6 +40,8 @@ if (strstr($url, 'mobileorder')) {
 					'item_quantity' => $buyItem,
 					'pay' => '0',
 					'created_at' => null,
+					'completed_flag' => '0',
+					'deleted_flag' => '0',
 				];
 
 				$count = 0;
@@ -168,7 +170,7 @@ if ($totalPrice !== 0) {
 							</dl>
 							<dl class="item-parts">
 								<dt>価格</dt>
-								<dd><?php echo $row['price']; ?>円</dd>
+								<dd><?php echo number_format($row['price']); ?>円</dd>
 							</dl>
 						</div>
 
@@ -176,7 +178,7 @@ if ($totalPrice !== 0) {
 
 					<?php endforeach; ?>
 
-					<p class="totalprice">合計金額： <span><?php echo $totalPrice; ?></span> 円</p>
+					<p class="totalprice">合計金額： <span><?php echo number_format($totalPrice); ?></span> 円</p>
 					<?php
 					if ($totalPrice !== 0) {
 						$_SESSION['totalPrice'] = $totalPrice;

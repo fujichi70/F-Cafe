@@ -2,7 +2,7 @@
 
 const DB_HOST = 'mysql:dbname=cafe;host=127.0.0.1;charset=utf8';
 const DB_USER = 'root';
-const DB_PASSWORD = '';
+const DB_PASSWORD = 'password';
 
 
 try {

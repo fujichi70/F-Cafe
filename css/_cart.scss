@@ -132,18 +132,6 @@
                 margin-bottom: 30px;
             }
         }
-        .back-btn--parts {
-            text-align: center;
-            .back-btn {
-                background-color: gainsboro;
-                color: rgb(69, 69, 69);
-                box-shadow: 2px 2px 0 rgb(69, 69, 69);
-                &:hover {
-                    color: gainsboro;
-                    background-color: rgb(119, 119, 119);
-                }
-            }
-        }
     }
 
     @media screen and (min-width: 700px) {

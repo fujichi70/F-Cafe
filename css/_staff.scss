@@ -1,4 +1,192 @@
+// スタッフ画面共通
+.staff-title {
+    font-size: 22px;
+    color: $sDarkBrown;
+    margin: 20px 0 30px;
+}
+
+.staff-text {
+    font-size: 16px;
+    color: $sDarkBrown;
+}
+
+.error {
+    color: rgb(181, 53, 53);
+}
+
+// スタッフログインページ
+#login {
+    font-family: "Courier New", Courier, monospace;
+    line-height: 50px;
+    .login-title--group {
+        margin-bottom: 40px;
+    }
+    .login-group {
+        dl {
+            display: flex;
+            dt {
+                width: 100px;
+                padding-bottom: 20px;
+            }
+            dd {
+                width: 73%;
+                padding-bottom: 20px;
+                .login-inputarea {
+                    width: 100%;
+                    border-radius: 20px;
+                    padding: 10px 20px;
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 700px) {
+        .login-group {
+            dl {
+                dt {
+                    // width: 20%;
+                }
+                dd {
+                    .login-inputarea {
+                        width: 450px;
+                        border-radius: 20px;
+                        padding: 10px 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 // 注文確認ページ
-#staff {
-	
+#orderConfirm {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 15px;
+    .order-title {
+        color: $sDarkBrown;
+        border-radius: 5px;
+        margin: 20px auto 0;
+        padding: 25px 20px 20px 20px;
+        position: relative;
+        z-index: 0;
+        background-color: rgb(252, 238, 193);
+        display: inline-block;
+        &:before {
+            border: 1px solid #fff;
+            border-radius: 5px;
+            content: "";
+            display: block;
+            margin: 4px;
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            z-index: -1;
+        }
+    }
+
+    .order-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .order-text--group {
+            display: flex;
+            align-items: center;
+            margin: 30px 0 10px;
+            .order-number {
+                padding: 10px;
+                font-size: 17px;
+                font-weight: bold;
+            }
+            .btn {
+                padding: 10px 15px;
+            }
+        }
+        .ready-group {
+            margin: 30px 0 10px;
+        }
+    }
+    .order-table {
+        text-align: center;
+        border-collapse: collapse;
+        thead {
+            border-bottom: double 2px #707070;
+            tr {
+                th {
+                    border: 1px solid #707070;
+                    padding: 10px;
+                    width: 200px;
+                }
+                .back-btn--parts {
+                    .back-btn {
+                        padding: 10px 15px;
+                    }
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    border: 1px solid #707070;
+                    padding: 10px;
+                    width: 200px;
+                    .pay-text {
+                        font-size: 17px;
+                        color: red;
+                    }
+                }
+                .back-btn--parts {
+                    .back-btn {
+                        padding: 10px 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 700px) {
+    #orderConfirm {
+        font-size: 20px;
+        .order-text--group {
+            .order-number {
+                font-size: 20px;
+            }
+            .btn {
+                padding: 12px 20px;
+            }
+        }
+
+        .order-table {
+            thead {
+                tr {
+                    .back-btn--parts {
+                        .back-btn {
+                            padding: 13px 20px;
+                        }
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    td {
+                        .pay-text {
+                            font-size: 20px;
+                        }
+                    }
+                    .back-btn--parts {
+                        .back-btn {
+                            padding: 13px 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ログアウトページ
+.logout-btn--parts {
+    text-align: right;
+    margin: 0 10px 10px 0;
 }

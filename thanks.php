@@ -2,6 +2,8 @@
 
 require 'functions.php';
 
+header('X-FRAME-OPTIONS:DENY');
+
 session_start();
 
 $order_id = 0;
