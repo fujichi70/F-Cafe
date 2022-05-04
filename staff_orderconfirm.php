@@ -78,15 +78,6 @@ if (!empty($_POST['complete'])) {
 	}
 }
 
-if (!empty($_POST['delete'])) {
-	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-		checkToken();
-		setToken();
-
-		
-	}
-}
-
 if (!empty($_POST['done'])) {
 	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		checkToken();
@@ -231,6 +222,7 @@ if (!empty($_POST['logout'])) {
 									<td>
 										<form action="staff_deleted.php" method="post">
 											<div class="back-btn--parts"><input type="submit" name="delete" class="btn back-btn" value="削除"></div>
+											<input type="hidden" name="csrf" value="<?php echo $_SESSION['token']; ?>">
 											<input type="hidden" name="csrf" value="<?php echo $_SESSION['token']; ?>">
 										</form>
 									</td>
